@@ -48,7 +48,6 @@ class StudentsController extends Controller
         $student->save();
 
         return redirect('/');
-
     }
 
     /**
@@ -64,7 +63,6 @@ class StudentsController extends Controller
         return view('student.show', [
             'student' => $student
         ]);
-
     }
 
     /**
@@ -75,7 +73,10 @@ class StudentsController extends Controller
      */
     public function edit(Student $id)
     {
-        
+        $student = Student::find($id)->first();
+        return view('student.edit',[
+            'student' => $student
+        ]);
     }
 
     /**

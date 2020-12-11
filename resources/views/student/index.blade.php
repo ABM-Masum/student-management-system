@@ -22,6 +22,7 @@
 				      <td>{{$student->department}}</td>
 				      <td>
 				      	<a href="/{{$student->id}}" class="btn btn-sm btn-info">show</a>
+				      	<a href="/{{$student->id}}/edit" class="btn btn-sm btn-warning">edit</a>
 				      </td>
 				    </tr>
 			    @endforeach
