@@ -21,8 +21,13 @@
 				      <td>{{$student->age}}</td>
 				      <td>{{$student->department}}</td>
 				      <td>
-				      	<a href="/{{$student->id}}" class="btn btn-sm btn-info">show</a>
-				      	<a href="/{{$student->id}}/edit" class="btn btn-sm btn-warning">edit</a>
+				      	<form method="POST" action="/{{$student->id}}/delete">
+					      	<a href="/{{$student->id}}" class="btn btn-sm btn-info">show</a>
+					      	<a href="/{{$student->id}}/edit" class="btn btn-sm btn-warning">edit</a>
+					      	@csrf
+					      	@method('DELETE')
+					      	<button class="btn btn-sm btn-danger">Delete</button>
+					    </form>
 				      </td>
 				    </tr>
 			    @endforeach

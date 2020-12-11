@@ -108,6 +108,9 @@ class StudentsController extends Controller
      */
     public function destroy(Student $id)
     {
-        
+        $student = Student::find($id)->first();
+        $student->delete();
+
+        return redirect('/');
     }
 }

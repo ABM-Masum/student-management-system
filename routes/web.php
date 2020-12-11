@@ -30,3 +30,4 @@ Route::get('/{id}/edit', [StudentsController::class, 'edit']);
 
 Route::put('/{id}', [StudentsController::class, 'update']);
 
+Route::delete('/{id}/delete', [StudentsController::class, 'destroy']);
