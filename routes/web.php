@@ -24,3 +24,5 @@ Route::get('create', [StudentsController::class, 'create']);
 
 Route::post('/', [StudentsController::class, 'store']);
 
+Route::get('/{id}', [StudentsController::class, 'show']);
+

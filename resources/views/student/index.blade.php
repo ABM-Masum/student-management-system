@@ -11,6 +11,7 @@
 			      <th scope="col">Name</th>
 			      <th scope="col">Age</th>
 			      <th scope="col">Department</th>
+			      <th scope="col"></th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -19,6 +20,9 @@
 				      <td>{{$student->firstName}} {{$student->lastName}}</td>
 				      <td>{{$student->age}}</td>
 				      <td>{{$student->department}}</td>
+				      <td>
+				      	<a href="/{{$student->id}}" class="btn btn-sm btn-info">show</a>
+				      </td>
 				    </tr>
 			    @endforeach
 			  </tbody>
