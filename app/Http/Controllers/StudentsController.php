@@ -88,7 +88,16 @@ class StudentsController extends Controller
      */
     public function update(Student $id)
     {
-        
+        $student = Student::find($id)->first();
+
+        $student->firstName = request('firstName');
+        $student->lastName = request('lastName');
+        $student->age = request('age');
+        $student->department = request('department');
+
+        $student->save();
+
+        return redirect('/'.$student->id);
     }
 
     /**

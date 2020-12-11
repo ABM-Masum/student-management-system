@@ -3,7 +3,11 @@
 @section ('content')
 
 <h3>Edit Information</h3><br>
-<form action="">
+<form method="POST" action="/{{$student->id}}">
+  
+  @csrf
+  @method('PUT')
+
 	<div class="form-group">
     <label for="firstName">First Name</label>
     <input 
