@@ -22,3 +22,5 @@ Route::get('/', [StudentsController::class, 'index']);
 
 Route::get('create', [StudentsController::class, 'create']);
 
+Route::post('/', [StudentsController::class, 'store']);
+

@@ -3,7 +3,8 @@
 @section ('content')
 
 <h3>Registration Form</h3><br>
-<form action="">
+<form method="POST" action="/">
+@csrf
 
   <div class="form-group">
     <label for="firstName">First Name</label>
